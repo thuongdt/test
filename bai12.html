@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phiếu đăng kí tham gia chương trình khuyễn mãi</title>
+    <style>
+        h1 {
+            color: darkgreen;
+            text-align: center;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid darkgreen;
+            border-collapse: collapse;
+        }
+        
+        table {
+            background-color: rgb(213, 235, 213);
+            color: darkseagreen;
+            text-align: left;
+            font-size: 18px;
+            width: 60%;
+            padding: 18px;
+        }
+        
+        td {
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Phiếu đăng kí tham gia chương trình khuyễn mãi</h1>
+    <table align="center">
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text" style="width: 80%"></td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td><input type="text" style="width: 60%"></td>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="tel" name="phone" pattern="" required></td>
+        </tr>
+        <tr>
+            <td>Phái</td>
+            <td style="display: flex;"><input type="radio" name="GT" value="Nam" checked>Nam <br>
+                <input type="radio" name="GT" value="Nữ">Nữ</td>
+        </tr>
+        <tr>
+            <td>Nghề nghiệp</td>
+            <td>
+                <select name="nghề nghiệp" id="">
+                <option value="bác sĩ">Bác sĩ</option>
+                <option value="kỹ sư">Kỹ sư</option>
+                <option value="giáo viên" selected>Giáo viên</option>
+                <option value="Khác">Khác</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Chọn sản phẩm tham gia</td>
+            <td>
+                <select name="sản phẩm" id="" size="4">
+                    <option value="kem đánh răng">Kem đánh răng</option>
+                    <option value="bột giặt">Bột giặt </option>
+                    <option value="Dầu gội đầu">Dầu gội đầu</option>
+                    <option value="Sữa tắm">Sữa tắm</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Số người dự đoán</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><button onclick="getResult()">Đăng nhập</button></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="result" style="text-align: center; color: deeppink;"></td>
+        </tr>
+        <script>
+            var getResult = function() {
+                var notify = 'Ban da dang kys thanh cong!';
+                document.getElementById('result').textContent = notify;
+            }
+        </script>
+
+    </table>
+</body>
+
+</html>
